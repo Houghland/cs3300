@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  #pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe User, :type => :model do
   subject {
-    User.new(email: "test@test.com", password: "123456")
+      User.new(email: "test@test.com",
+               password: "123456")
   }
-
+  
   it "is valid with an email and password" do
     expect(subject).to be_valid  
   end
@@ -19,5 +19,4 @@ RSpec.describe User, type: :model do
     subject.password = nil
     expect(subject).to_not be_valid  
   end  
-  
 end
