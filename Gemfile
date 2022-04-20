@@ -74,3 +74,4 @@ gem 'mini_racer'
   end
 
 
+gem 'devise'
